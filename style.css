@@ -1,0 +1,226 @@
+* {
+    margin: auto 12px;
+    padding: 2px;
+    background-color: #1e1d1d;
+    color: white;
+}
+
+#heading1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    font-size: clamp(16px, 5vw, 36px);
+    /* Adjust font size between 16px and 36px */
+    min-width: 160px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    border: #1e1d1d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
+
+body {
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+}
+
+
+
+textarea {
+    width: 70%;
+    /* Set width to 70% of the container */
+    height: 50px;
+    /* Adjust height as needed */
+    font-size: 16px;
+    /* Optional: Font size */
+    padding: 10px;
+    /* Optional: Padding */
+    margin: 10px 0;
+    /* One line space above and below */
+}
+
+.inputtxt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+
+
+/* Add some basic styles for the button */
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    /* Space between textarea and button */
+    padding: 10px 15px;
+    /* Padding inside the button */
+    background-color: rgb(255, 0, 0);
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    font-size: 16px;
+    /* Font size */
+}
+
+/* Button hover effect */
+.add-button:hover {
+    background-color: rgba(255, 0, 0, 0.83);
+    /* Darker green on hover */
+}
+
+.tasks {
+    position: relative;
+    /* Set to relative for positioning the pseudo-element */
+    border: rgba(255, 0, 0, 0.748) 2px solid;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 7px;
+    margin: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    border-radius: 10px;
+
+    align-items: center;
+}
+
+.sub-tasks {
+    display: flex;
+    flex-grow: 1;
+}
+
+.remove-button {
+    background-color: red;
+    /* Background color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* No border */
+    border-radius: 50%;
+    /* Circular button */
+    width: 20px;
+    /* Width */
+    height: 20px;
+    /* Height */
+    font-weight: bold;
+    font-size: 10px;
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    text-align: center;
+    /* Center text */
+    /* line-height: 17px; Center text vertically */
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.remove-button:hover {
+    background-color: rgb(255, 119, 0);
+    transform: scale(1.1);
+}
+
+
+.add-bullet-button {
+    padding: 4px;
+    margin: 0%;
+}
+
+/* Bullet list items */
+.bullet-list {
+    list-style-type: none;
+    /* Remove default bullet styling */
+    padding-left: 0;
+}
+
+.bullet-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.remove-bullet {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove-bullet:hover {
+    background-color: darkred;
+}
+
+.remove-bullet-button {
+    background-color: #605050;
+    /* Red background */
+    color: white;
+    font-weight: bolder;
+    /* White text */
+    border: none;
+    /* Remove border */
+    border-radius: 50%;
+    /* Make it circular */
+    width: 15px;
+    /* Set width */
+    height: 15px;
+    /* Set height */
+    display: flex;
+    /* Center icon */
+    justify-content: center;
+    /* Center icon */
+    align-items: center;
+    /* Center icon */
+    cursor: pointer;
+    /* Change cursor on hover */
+    margin-left: 10px;
+    /* Space between checkbox text and button */
+}
+
+.remove-bullet-button:hover {
+    background-color: #ffa71a91; /* Darker red on hover */
+}
+
+/* ---------------------------------------------------------- */
