@@ -21,21 +21,23 @@
 
     <div class="container">
         <div class="tasks">
-            <h3>Task 1 <button class="remove-button" style="">X</button></h3>
+            <h3>Task 1 <button class="remove-button" onclick="removeTask(this)">X</button></h3>
             <ul class="bullet-list">
-                <li><input type="checkbox" class="checkbox">Your tasks item 1
+                <li>
+                    <input type="checkbox" class="checkbox" onchange="checkbox_mark(this)"> Check if you finished this
                     <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
                 </li>
             </ul>
             <div>
                 <input type="text" placeholder="Add bullet item...">
-                <button class="add-bullet-button">Add</button>
+                <button class="add-bullet-button" onclick="add_to_list(this)">Add</button>
             </div>
         </div>
+        
         <div class="tasks">
             <h3>Task 2 <button class="remove-button">X</button></h3>
             <ul class="bullet-list">
-                    <li><input type="checkbox" class="checkbox">Your tasks item 1
+                    <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">To remove, press :
                         <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
                     </li>
             </ul>
@@ -45,9 +47,9 @@
             </div>
         </div>
         <div class="tasks">
-            <h3>Task 3 <button class="remove-button">X</button></h3>
+            <h3>Try This :<button class="remove-button">X</button></h3>
             <ul class="bullet-list">
-                    <li><input type="checkbox" class="checkbox">Your tasks item 1
+                    <li><input type="checkbox" class="checkbox"onchange="checkbox_mark(this)">Your tasks item 1
                         <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
                     </li>
             </ul>
@@ -59,7 +61,7 @@
         <div class="tasks">
             <h3>Task 4 <button class="remove-button">X</button></h3>
             <ul class="bullet-list">
-                    <li><input type="checkbox" class="checkbox">Your tasks item 1
+                    <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">Your tasks item 1
                         <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
                     </li>
             </ul>
@@ -71,7 +73,7 @@
         <div class="tasks">
             <h3>Task 5 <button class="remove-button">X</button></h3>
             <ul class="bullet-list">
-                    <li><input type="checkbox" class="checkbox">Your tasks item 1
+                    <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">Your tasks item 1
                         <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
                     </li>
             </ul>
@@ -83,7 +85,7 @@
         <div class="tasks">
             <h3>Task 6 <button class="remove-button">X</button></h3>
             <ul class="bullet-list">
-                    <li><input type="checkbox" class="checkbox">Your tasks item 1
+                    <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">Your tasks item 1
                         <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
                     </li>
             </ul>

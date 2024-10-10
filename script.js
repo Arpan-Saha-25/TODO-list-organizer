@@ -1,3 +1,49 @@
+function removeBullet(button) {
+    // Find the parent <li> element and remove it
+    const listItem = button.parentElement;
+    listItem.remove();
+}
+
+// Checkbox function to handle marking/unmarking
+function checkbox_mark(checkbox) {
+    const bulletItem = checkbox.parentElement; // Get the <li> element
+    if (checkbox.checked) {
+        bulletItem.style.textDecoration = "line-through"; // Apply line-through
+    } else {
+        bulletItem.style.textDecoration = "none"; // Remove line-through
+    }
+}
+
+function add_to_list(button) {
+    // Find the input field associated with the button that was clicked
+    const taskDiv = button.closest(".tasks");
+    const bulletInputField = taskDiv.querySelector("input[type='text']");
+    const bulletText = bulletInputField.value.trim();
+
+    if (bulletText) {
+        // Create a new bullet list item with checkbox and remove button
+        const bulletItem = document.createElement("li");
+        bulletItem.innerHTML = `
+            <input type="checkbox" class="checkbox"> ${bulletText} 
+            <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
+        `;
+
+        // Append the new bullet item to the bullet list
+        taskDiv.querySelector(".bullet-list").appendChild(bulletItem);
+
+        // Clear bullet input field
+        bulletInputField.value = "";
+
+        // Add functionality to the checkbox (check/uncheck)
+        const checkbox = bulletItem.querySelector(".checkbox");
+        checkbox.addEventListener("change", function() {
+            checkbox_mark(checkbox);
+        });
+    } else {
+        alert("Please enter a bullet item.");
+    }
+}
+
 window.onload = function() {
     const addButton = document.querySelector(".add-button");
     const inputField = document.getElementById("firstbar");
@@ -28,43 +74,8 @@ window.onload = function() {
 
             // Add functionality to the new bullet button
             const addBulletButton = taskDiv.querySelector(".add-bullet-button");
-            const bulletInputField = taskDiv.querySelector("input[type='text']");
-
             addBulletButton.addEventListener("click", function() {
-                const bulletText = bulletInputField.value.trim();
-
-                if (bulletText) {
-                    // Create a new bullet list item with checkbox and remove button
-                    const bulletItem = document.createElement("li");
-                    bulletItem.innerHTML = `
-                        <input type="checkbox" class="checkbox"> ${bulletText} 
-                        <button class="remove-bullet-button" onclick="removeBullet(this)">X</button>
-                    `;
-
-                    // Append the new bullet item to the bullet list
-                    taskDiv.querySelector(".bullet-list").appendChild(bulletItem);
-
-                    // Clear bullet input field
-                    bulletInputField.value = "";
-
-                    // Add functionality to the checkbox (check/uncheck)
-                    const checkbox = bulletItem.querySelector(".checkbox");
-                    checkbox.addEventListener("change", function() {
-                        if (this.checked) {
-                            bulletItem.style.textDecoration = "line-through";
-                        } else {
-                            bulletItem.style.textDecoration = "none";
-                        }
-                    });
-
-                    // Add functionality to remove the bullet item with "X" button
-                    const removeBulletButton = bulletItem.querySelector(".remove-bullet-button");
-                    removeBulletButton.addEventListener("click", function() {
-                        bulletItem.remove(); // Remove the bullet item
-                    });
-                } else {
-                    alert("Please enter a bullet item.");
-                }
+                add_to_list(this);
             });
 
             // Add functionality to the task's remove button
@@ -75,6 +86,13 @@ window.onload = function() {
         } else {
             alert("Please enter a task."); // Alert if input is empty
         }
+    });
+
+    // Enable existing predefined add bullet buttons
+    document.querySelectorAll(".add-bullet-button").forEach(button => {
+        button.addEventListener("click", function() {
+            add_to_list(this);
+        });
     });
 
     // Optional: Add functionality to remove tasks via event delegation (for dynamic content)
