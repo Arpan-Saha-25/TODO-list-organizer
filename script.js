@@ -19,7 +19,7 @@ function add_to_list(button) {
     const taskDiv = button.closest(".tasks");
     const bulletInputField = taskDiv.querySelector("input[type='text']");
     const bulletText = bulletInputField.value.trim();
-
+    console.log("bulletText : "+ bulletText)
     if (bulletText) {
         // Create a new bullet list item with checkbox and remove button
         const bulletItem = document.createElement("li");
@@ -36,22 +36,24 @@ function add_to_list(button) {
 
         // Add functionality to the checkbox (check/uncheck)
         const checkbox = bulletItem.querySelector(".checkbox");
-        checkbox.addEventListener("change", function() {
+        checkbox.addEventListener("change", function () {
             checkbox_mark(checkbox);
         });
-    } else {
+    }
+    else {
         alert("Please enter a bullet item.");
     }
 }
 
-window.onload = function() {
+window.onload = function () {
     const addButton = document.querySelector(".add-button");
     const inputField = document.getElementById("firstbar");
     const container = document.querySelector(".container");
 
     // Add new task when "+" button is clicked
-    addButton.addEventListener("click", function() {
+    addButton.addEventListener("click", function () {
         const taskText = inputField.value.trim(); // Get input value
+        // console.log("taskText:"+taskText);
 
         if (taskText) {
             // Create a new task element
@@ -68,19 +70,19 @@ window.onload = function() {
 
             // Append the new task to the container
             container.appendChild(taskDiv);
-            
+
             // Clear the input field
             inputField.value = "";
 
             // Add functionality to the new bullet button
             const addBulletButton = taskDiv.querySelector(".add-bullet-button");
-            addBulletButton.addEventListener("click", function() {
+            addBulletButton.addEventListener("click", function () {
                 add_to_list(this);
             });
 
             // Add functionality to the task's remove button
             const removeButton = taskDiv.querySelector(".remove-button");
-            removeButton.addEventListener("click", function() {
+            removeButton.addEventListener("click", function () {
                 container.removeChild(taskDiv);
             });
         } else {
@@ -88,15 +90,8 @@ window.onload = function() {
         }
     });
 
-    // Enable existing predefined add bullet buttons
-    document.querySelectorAll(".add-bullet-button").forEach(button => {
-        button.addEventListener("click", function() {
-            add_to_list(this);
-        });
-    });
-
     // Optional: Add functionality to remove tasks via event delegation (for dynamic content)
-    container.addEventListener("click", function(event) {
+    container.addEventListener("click", function (event) {
         if (event.target.classList.contains("remove-button")) {
             const taskToRemove = event.target.closest(".tasks");
             container.removeChild(taskToRemove);
