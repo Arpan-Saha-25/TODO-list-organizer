@@ -1,6 +1,7 @@
 # Do Your TODO ✨
 
 A simple and interactive Todo list application to help you manage your tasks effectively! 📝
+![Image](image.png)
 
 ## Features 🚀
 - **Add Tasks**: Create new tasks with a click of a button! ➕
@@ -25,4 +26,4 @@ Feel free to submit issues or pull requests. Your contributions are welcome!
 ## License 📄
 This project is licensed under me.
 
-Happy tasking! 🎉
+### Happy tasking! 🎉
