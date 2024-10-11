@@ -5,6 +5,12 @@
     color: white;
 }
 
+#firstbar {
+    resize: none;
+    border-radius: 9px;
+
+}
+
 #heading1 {
     display: flex;
     align-items: center;
@@ -28,8 +34,6 @@
 
 }
 
-
-
 body {
     align-items: center;
     align-content: center;
@@ -43,10 +47,8 @@ body {
     /* Center horizontally */
 }
 
-
-
 textarea {
-    width: 70%;
+    width: 80%;
     /* Set width to 70% of the container */
     height: 50px;
     /* Adjust height as needed */
@@ -56,6 +58,7 @@ textarea {
     /* Optional: Padding */
     margin: 10px 0;
     /* One line space above and below */
+    overflow: auto;
 }
 
 .inputtxt {
@@ -64,8 +67,6 @@ textarea {
     align-items: center;
     width: 80%;
 }
-
-
 
 /* Add some basic styles for the button */
 .add-button {
@@ -113,6 +114,7 @@ textarea {
     border-radius: 10px;
 
     align-items: center;
+    box-shadow: 2px 2px 12px 2px rgba(43, 0, 255, 0.211);;
 }
 
 .sub-tasks {
@@ -222,5 +224,3 @@ textarea {
 .remove-bullet-button:hover {
     background-color: #ffa71a91; /* Darker red on hover */
 }
-
-/* ---------------------------------------------------------- */
