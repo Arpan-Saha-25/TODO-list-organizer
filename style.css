@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
 * {
     margin: auto 12px;
     padding: 2px;
     background-color: #1e1d1d;
     color: white;
+    font-family: "Poppins", sans-serif, arial;
 }
 
 #firstbar {
