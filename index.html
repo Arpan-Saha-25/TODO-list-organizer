@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do Your TODO</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="newstyle.css">
     <script src="script.js"></script>
 </head>
 
 <!-- body -->
+
 <body>
     <h1 id="heading1">Do Your TODO !!</h1>
 
@@ -19,11 +20,12 @@
     </div>
 
     <div class="inputtxt">
-        <textarea name="bar" rows="1" cols="3" id="firstbar" placeholder="Add your TODO here..."></textarea>
+        <input type="text" name="bar" rows="1" cols="3" id="firstbar" placeholder="Add your TODO here..." id="typeTodo">
+
         <button class="add-button">+</button>
     </div>
 
-    <div class="container">
+    <div class="container ">
         <div class="tasks">
             <h3>Task 1 <button class="remove-button" onclick="removeTask(this)">X</button></h3>
             <ul class="bullet-list">
@@ -37,13 +39,13 @@
                 <button class="add-bullet-button" onclick="add_to_list(this)">Add</button>
             </div>
         </div>
-        
         <div class="tasks">
-            <h3>Task 2 <button class="remove-button">X</button></h3>
+            <h3>Task 2 <button class="remove-button" onclick="removeTask(this)">X</button></h3>
+
             <ul class="bullet-list">
-                    <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">To remove, press :
-                        <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
-                    </li>
+                <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">To remove, press :
+                    <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
+                </li>
             </ul>
             <div>
                 <input type="text" placeholder="Add bullet item...">
@@ -53,9 +55,9 @@
         <div class="tasks">
             <h3>Try This :<button class="remove-button">X</button></h3>
             <ul class="bullet-list">
-                    <li><input type="checkbox" class="checkbox"onchange="checkbox_mark(this)">Your tasks item 1
-                        <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
-                    </li>
+                <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">Your tasks item 1
+                    <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
+                </li>
             </ul>
             <div>
                 <input type="text" placeholder="Add bullet item...">
@@ -65,9 +67,9 @@
         <div class="tasks">
             <h3>Task 4 <button class="remove-button">X</button></h3>
             <ul class="bullet-list">
-                    <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">Your tasks item 1
-                        <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
-                    </li>
+                <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">Your tasks item 1
+                    <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
+                </li>
             </ul>
             <div>
                 <input type="text" placeholder="Add bullet item...">
@@ -77,9 +79,9 @@
         <div class="tasks">
             <h3>Task 5 <button class="remove-button">X</button></h3>
             <ul class="bullet-list">
-                    <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">Your tasks item 1
-                        <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
-                    </li>
+                <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">Your tasks item 1
+                    <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
+                </li>
             </ul>
             <div>
                 <input type="text" placeholder="Add bullet item...">
@@ -89,19 +91,19 @@
         <div class="tasks">
             <h3>Task 6 <button class="remove-button">X</button></h3>
             <ul class="bullet-list">
-                    <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">Your tasks item 1
-                        <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
-                    </li>
+                <li><input type="checkbox" class="checkbox" onchange="checkbox_mark(this)">Your tasks item 1
+                    <button class="remove-bullet-button" onclick="removeBullet(this)">-</button>
+                </li>
             </ul>
             <div>
                 <input type="text" placeholder="Add bullet item...">
                 <button class="add-bullet-button" onclick="add_to_list(this)">Add</button>
             </div>
-            
+
         </div>
-        
+
     </div>
-     
+
 </body>
 
 </html>
